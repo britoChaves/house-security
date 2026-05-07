@@ -1,0 +1,208 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CONFIG GERAL */
+body {
+    background-color: #FFF;
+    color: #1B263B;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* CONFIG CABEÇALHO NO GERAL */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 8%;
+    background-color: #1B263B;
+}
+
+/* CONFIG DA LOGO */
+.logo img {
+    height: 75px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* CONFIG MENU DE NAVEGAÇÃO */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+/* CONFIG ITEMS DO MENU */
+nav ul li {
+    margin-left: 35px;
+    position: relative;
+}
+
+/* CONFIG LINK DE CADA ITEM DO MENU */
+nav ul li a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 600;
+    padding-bottom: 8px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/*  CRIANDO UMA 'LINHA' EMBAIXO DE CADA ITEM */
+nav ul li a::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFF;
+    transition: width 0.4s ease-in-out; 
+}
+
+/* DEFININDO A COR DO TEXTO QUANDO O MOUSE ESTIVER EM CIMA */
+nav ul li a:hover {
+    color: #FFF;
+}
+
+/* FAZ A LINHA 'CRESCER/CORRER' ATÉ O TAMANHO TOTAL DO ITEM */
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* CONFIG CONTEÚDO PRINCIPAL */
+.vitrine {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    padding: 20px 5%;
+    gap: 30px;
+}
+
+/* BOTÃO ESQUERDO */
+.esquerdo {
+    background: none;
+    border: none;
+    font-size: 50px;
+    color: #1B263B;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2;
+    padding: 20px;
+    z-index: 10;
+}
+
+/* MUDANDO A COR DO BOTÃO COM O MOUSE EM CIMA */
+.esquerdo:hover {
+    transform: scale(1.2);
+    color: #000;
+}
+
+/* CONFIG GERAL IMAGEM E DESC DOS PRODUTOS */
+.produtoPrincipal {
+    display: flex;
+    align-items: center;
+    max-width: 1100px;
+    gap: 60px;
+}
+
+/* COR DE FUNDO DA IMAGEM */
+.produtoImagem {
+    background-color: #F8F9FA;
+    width: 400px;
+    height: 400px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    flex-shrink: 0;
+}
+
+/* CONFIG TAMANHO DA IMAGEM */
+.produtoImagem img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+/* DESCRIÇÃO AO LADO DA IMAGEM */
+.produtoDesc {
+    flex: 1;
+}
+
+/* CONFIG NOME DO PRODUTO */
+.produtoDesc h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    color: #1B263B;
+}
+
+/* CONFIG TEXTO DESCRIÇÃO DO PRODUTO */
+.produtoDesc p {
+    font-size: 19px;
+    line-height: 1.7;
+    color: #4A5568;
+    max-width: 500px;
+}
+
+/* BOTÃO DIREITO */
+.direito {
+    background: none;
+    border: none;
+    font-size: 50px;
+    color: #1B263B;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2;
+    padding: 20px;
+    z-index: 10;
+}
+
+/* MUDANÇA DE COR COM O MOUSE */
+.direito:hover {
+    transform: scale(1.2);
+    color: #000;
+}
+
+/* CONFIG DO RODAPÉ */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #1B263B;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    font-weight: bold;
+}
+
+/* TEXTO CONTATO */
+.contatoRodape {
+    font-size: 18px;
+}
+
+/* VISUAL DO BOTÃO ORÇAMENTO */
+.orcamentoRodape {
+    background-color: #FFF;
+    color: #1B263B;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 2px solid #FFF;
+}
+
+/* 'ANIMAÇÃO' DO BOTÃO ORÇAMENTO */
+.orcamentoRodape:hover {
+    background-color: transparent;
+    color: #FFF;
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
